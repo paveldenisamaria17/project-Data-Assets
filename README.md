@@ -19,7 +19,7 @@ It searches DuckDuckGo using the company name and city.
 Website Test Results (First 20 companies via DuckDuckGo, Name + City):
 2 likely correct websites
 9 Companies House pages
-1 directory page (D&B)
+1 directory page
 8 nothing found
 
 Manual Verification:
