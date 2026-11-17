@@ -26,6 +26,8 @@ a ratat 5 (1 a dat director dnb, 4 au dat nimic).
 La cele 13 fara site nu a dat niciun site gresit.
 VAT pe site: 1 din 20 (Giacom, neverificat inca la HMRC).
 
-Am refacut script-ul incat sa fie find_sites2.py si ar trebui sa nu afiseze companies house sites si directoare dar
-find_sites2.py rulat de 3 ori pe aceleasi 20 firme da rezultate diferite de fiecare data (Wild Box gasit/pierdut/gasit). Rularea 3 a gasit 4 din 7 site-uri cunoscute (Wild Box, Sonatune, Kilncare, Koel). Au trecut de filtru 5 directoare noi 
-+ o reclama Bing. 
+Am refacut script-ul incat sa fie find_sites2.py si ar trebui sa nu afiseze companies house sites si directoare
+I changed the find_sites2.py to save in a csv the sites with valid links but if some dierctory sites are there is because I can t block them all.
+
+Step 4
+Script for searching the VAT on those 7 sites I found:
