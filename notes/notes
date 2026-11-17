@@ -1,3 +1,23 @@
-Citesc: data/raw\BasicCompanyDataAsOneFile-2026-11-01\BasicCompanyDataAsOneFile-2026-11-01.csv
-Firme active (Private Limited): 4761802
-Salvat data/sample.csv cu 400 firme
+sample.csv is containing 400 companies
+
+Result of find_sites.py :
+ZOOROPA LIMITED -> nimic
+ST TRADERS LIMITED -> https://find-and-update.company-information.service.gov.uk/company/12611340
+CAEMORA LTD -> nimic
+WILD BOX EVENTS LTD -> https://wildboxevents.co.uk/home/
+LE BIEN-ETRE LTD -> https://find-and-update.company-information.service.gov.uk/company/16410786
+KS2 CLEAN LTD -> nimic
+GORGEOUS LIMITED -> nimic
+AV SURREY CATERING LTD -> https://find-and-update.company-information.service.gov.uk/company/16483030
+SALLYPORT HOUSE MANAGEMENT LIMITED -> nimic
+DOUBLETALK LTD -> https://find-and-update.company-information.service.gov.uk/company/10961699
+ELEGANCE TRADERS LTD -> https://find-and-update.company-information.service.gov.uk/company/12662748
+JMT CONSULTING LTD -> https://find-and-update.company-information.service.gov.uk/company/08381590
+SONATUNE LTD -> https://sonatune.co.uk/home
+KOEL RETAIL TECHNOLOGIES LTD -> https://www.dnb.com/business-directory/company-profiles.koel_retail_technologies_ltd.99c18c020bcafb856b228be1f1a59b9b.html
+KILNCARE LIMITED -> nimic
+NURSERY THYMES TWO LIMITED -> https://find-and-update.company-information.service.gov.uk/company/04282326
+GIACOM (DEVELOPMENT) LIMITED -> nimic
+PIXEL PROJECTS LTD -> nimic
+TO THE HORIZON LTD -> https://find-and-update.company-information.service.gov.uk/company/13031169
+BLYTH SPARTANS CATERING LTD -> https://find-and-update.company-information.service.gov.uk/company/16808789
