@@ -39,16 +39,21 @@ Using the script to search for VAT numbers on those 7 sites, I found that the on
 ## Step 5
 I will update the scripts to run for the full sample of 400.
 
-A much faster approach is to guess the domain name directly from the company name and check it using **30 threads in parallel** with **3 domain choices per company**.
+A much faster approach is to guess the domain name directly from the company name and check it using **30 threads in parallel** with **3 name variants × 3 endings**.
+**full (numele întreg, fără LTD/LIMITED): .co.uk, .com, .uk**
+**partial, primele 2 cuvinte (doar dacă numele are mai mult de 2 cuvinte): .co.uk, .com, .uk**
+**partial, primul cuvânt (doar dacă numele are mai mult de 1 cuvânt și primul are minim 4 litere): .co.uk, .com, .uk**
 
-- **108 websites found out of 400**
+- **262 websites found out of 400**
 
 **The VAT script for the 400-company sample showed:**
-- `none`: 83
-- `blocked`: 23
-- `found`: 2
+- `none`: 114
+- `blocked`: 49
+- `unreachable`: 46
+- `timeout`: 46
+- `found`: 7
 
-I ran all 108 websites directly using Playwright with **5 tabs in parallel**. 
-*(Note: "blocked" here means the website returns a 403 error even in a real browser.)*
+I ran all 262 websites directly using Playwright with **10 tabs in parallel**. 
+*blocked here means the website returns a 403 error even in a real browser*
 
-The result of finding only **2 VAT numbers** for a list of 400 companies is very low.
+The result of finding only **7 VAT numbers** for a list of 400 companies is very low.
