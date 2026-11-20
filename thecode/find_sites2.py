@@ -3,7 +3,8 @@ from urllib.parse import urlparse
 import pandas as pd
 from ddgs import DDGS
 
-OUT = r"C:\Users\pavel\Desktop\project-Data-Assets\data\companies_websites.csv"
+D = r"C:\Users\pavel\OneDrive\Imagini\Capturi de ecran\Documente\GitHub\project-Data-Assets\data"
+OUT = os.path.join(D, "companies_websites.csv")
 GENERIC = {"ltd", "limited", "llp", "plc", "the", "and", "services", "service", "group", "holdings",
            "management", "consulting", "trading", "traders", "development", "company", "uk"}
 
@@ -23,15 +24,16 @@ def find(name, town):
             time.sleep(5)
     return None
 
-df = pd.read_csv("data/sample.csv", dtype=str).head(20)
+df = pd.read_csv(os.path.join(D, "sample.csv"), dtype=str).head(20)
+df.columns = df.columns.str.strip()
 rows = []
 for _, r in df.iterrows():
     s = find(r["CompanyName"], r["RegAddress.PostTown"])
     print(r["CompanyName"], "->", s or "nimic")
     if s:
-        rows.append({"CompanyName": r["CompanyName"], "Website": s})
+        rows.append({"CompanyNumber": r["CompanyNumber"], "CompanyName": r["CompanyName"], "Website": s})
     time.sleep(2)
 
-os.makedirs(os.path.dirname(OUT), exist_ok=True)
-pd.DataFrame(rows).to_csv(OUT, index=False, encoding="utf-8-sig")
+os.makedirs(D, exist_ok=True)
+pd.DataFrame(rows, columns=["CompanyNumber", "CompanyName", "Website"]).to_csv(OUT, index=False, encoding="utf-8-sig")
 print(f"\nSalvat {len(rows)} firme în {OUT}")
